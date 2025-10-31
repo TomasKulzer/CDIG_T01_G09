@@ -14,3 +14,4 @@ Sub-carrier spacing: 20M/64 = 0.3125 MHz
 
 FFT/IFFT size: 64-point
 
+<img width="1502" height="367" alt="image" src="https://github.com/user-attachments/assets/04eb7b4a-30ce-4df0-84a6-ef8b43ba9182" />
