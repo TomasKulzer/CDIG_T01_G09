@@ -33,11 +33,11 @@ options:
     state: enabled
 
 blocks:
-- name: samp_rate
+- name: window_size
   id: variable
   parameters:
     comment: ''
-    value: '32000'
+    value: '48'
   states:
     bus_sink: false
     bus_source: false
@@ -121,7 +121,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     num_inputs: '2'
-    type: complex
+    type: float
     vlen: '1'
   states:
     bus_sink: false
@@ -158,7 +158,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_delay: '0'
-    taps: ''
+    taps: (1)*window_size
     type: ccc
   states:
     bus_sink: false
@@ -177,8 +177,8 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_delay: '0'
-    taps: ''
-    type: ccc
+    taps: (1)*window_size
+    type: fff
   states:
     bus_sink: false
     bus_source: false
@@ -255,7 +255,7 @@ blocks:
     bw7: '0'
     bw8: '0'
     bw9: '0'
-    center_freq0: '0'
+    center_freq0: '5220000000'
     center_freq1: '0'
     center_freq10: '0'
     center_freq11: '0'
@@ -363,7 +363,7 @@ blocks:
     dc_offs_enb9: default
     dev_addr: '""'
     dev_args: ''
-    gain0: '0'
+    gain0: '30'
     gain1: '0'
     gain10: '0'
     gain11: '0'
@@ -560,7 +560,7 @@ blocks:
     nchan: '1'
     num_mboards: '1'
     otw: ''
-    rx_agc0: Default
+    rx_agc0: Disabled
     rx_agc1: Default
     rx_agc10: Default
     rx_agc11: Default
@@ -592,7 +592,7 @@ blocks:
     rx_agc7: Default
     rx_agc8: Default
     rx_agc9: Default
-    samp_rate: samp_rate
+    samp_rate: '20000000'
     sd_spec0: ''
     sd_spec1: ''
     sd_spec2: ''
