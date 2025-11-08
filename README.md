@@ -1,17 +1,3 @@
 This a repository of the final project for the curricular unit Digital Communications and is updated atleast once a week.
 
-System design parameters for the 802.11a OFDM:
-
-Bandwidth: 20 MHz
-
-Nº of sub-carriers: 64
-
-Data sub-carriers: 48
-
-Pilot subcarriers: 4
-
-Sub-carrier spacing: 20M/64 = 0.3125 MHz
-
-FFT/IFFT size: 64-point
-
-<img width="1502" height="367" alt="image" src="https://github.com/user-attachments/assets/04eb7b4a-30ce-4df0-84a6-ef8b43ba9182" />
+<img width="1536" height="450" alt="image" src="https://github.com/user-attachments/assets/52b2e82a-13f5-4185-9a00-0ae00fe29b45" />
