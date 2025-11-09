@@ -86,7 +86,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [936, 480.0]
+    coordinate: [936, 472.0]
     rotation: 0
     state: enabled
 - name: blocks_conjugate_cc_0
@@ -123,6 +123,26 @@ blocks:
     bus_structure: null
     coordinate: [536, 240.0]
     rotation: 0
+    state: enabled
+- name: blocks_delay_0_0
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '240'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    showports: 'False'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1304, 600.0]
+    rotation: 180
     state: enabled
 - name: blocks_divide_xx_0
   id: blocks_divide_xx
@@ -182,6 +202,45 @@ blocks:
     coordinate: [960, 320.0]
     rotation: 0
     state: enabled
+- name: blocks_stream_to_vector_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '64'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [832, 592.0]
+    rotation: 180
+    state: enabled
+- name: fft_vxx_0
+  id: fft_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    fft_size: '64'
+    forward: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nthreads: '1'
+    shift: 'True'
+    type: complex
+    window: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [480, 552.0]
+    rotation: 180
+    state: enabled
 - name: fir_filter_xxx_0
   id: fir_filter_xxx
   parameters:
@@ -217,8 +276,99 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1120, 464.0]
+    coordinate: [1120, 456.0]
     rotation: 0
+    state: enabled
+- name: ieee802_11_decode_mac_0
+  id: ieee802_11_decode_mac
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    debug: 'False'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [696, 760.0]
+    rotation: 0
+    state: enabled
+- name: ieee802_11_frame_equalizer_0
+  id: ieee802_11_frame_equalizer
+  parameters:
+    affinity: ''
+    algo: ieee802_11.LS
+    alias: ''
+    bw: 10e6
+    comment: ''
+    debug: 'False'
+    freq: 5.89e9
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [408, 752.0]
+    rotation: 0
+    state: enabled
+- name: ieee802_11_parse_mac_0
+  id: ieee802_11_parse_mac
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    debug: 'False'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [960, 760.0]
+    rotation: 0
+    state: enabled
+- name: ieee802_11_sync_long_0
+  id: ieee802_11_sync_long
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    debug: 'False'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sync_length: '240'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 568.0]
+    rotation: 180
+    state: enabled
+- name: ieee802_11_sync_short_0
+  id: ieee802_11_sync_short
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    debug: 'False'
+    log: 'False'
+    maxoutbuf: '0'
+    min_plateau: '2'
+    minoutbuf: '0'
+    threshold: '0.8'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1480, 560.0]
+    rotation: 180
     state: enabled
 - name: iio_pluto_source_0
   id: iio_pluto_source
@@ -251,6 +401,26 @@ blocks:
     coordinate: [48, 132.0]
     rotation: 0
     state: disabled
+- name: network_socket_pdu_0
+  id: network_socket_pdu
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    host: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mtu: '10000'
+    port: '52001'
+    tcp_no_delay: 'False'
+    type: TCP_SERVER
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1248, 744.0]
+    rotation: 0
+    state: enabled
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
   parameters:
@@ -345,22 +515,33 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1704, 328.0]
+    coordinate: [1600, 128.0]
     rotation: 0
-    state: enabled
+    state: disabled
 
 connections:
 - [blocks_complex_to_mag_0, '0', blocks_divide_xx_0, '0']
 - [blocks_complex_to_mag_squared_0, '0', fir_filter_xxx_0_0, '0']
 - [blocks_conjugate_cc_0, '0', blocks_multiply_xx_0, '0']
 - [blocks_delay_0, '0', blocks_conjugate_cc_0, '0']
-- [blocks_divide_xx_0, '0', qtgui_time_sink_x_0, '0']
+- [blocks_delay_0, '0', ieee802_11_sync_short_0, '0']
+- [blocks_delay_0_0, '0', ieee802_11_sync_long_0, '1']
+- [blocks_divide_xx_0, '0', ieee802_11_sync_short_0, '2']
 - [blocks_file_source_0, '0', blocks_complex_to_mag_squared_0, '0']
 - [blocks_file_source_0, '0', blocks_delay_0, '0']
 - [blocks_file_source_0, '0', blocks_multiply_xx_0, '1']
 - [blocks_multiply_xx_0, '0', fir_filter_xxx_0, '0']
+- [blocks_multiply_xx_0, '0', ieee802_11_sync_short_0, '1']
+- [blocks_stream_to_vector_0, '0', fft_vxx_0, '0']
+- [fft_vxx_0, '0', ieee802_11_frame_equalizer_0, '0']
 - [fir_filter_xxx_0, '0', blocks_complex_to_mag_0, '0']
 - [fir_filter_xxx_0_0, '0', blocks_divide_xx_0, '1']
+- [ieee802_11_decode_mac_0, out, ieee802_11_parse_mac_0, in]
+- [ieee802_11_frame_equalizer_0, '0', ieee802_11_decode_mac_0, '0']
+- [ieee802_11_parse_mac_0, out, network_socket_pdu_0, pdus]
+- [ieee802_11_sync_long_0, '0', blocks_stream_to_vector_0, '0']
+- [ieee802_11_sync_short_0, '0', blocks_delay_0_0, '0']
+- [ieee802_11_sync_short_0, '0', ieee802_11_sync_long_0, '0']
 
 metadata:
   file_format: 1
