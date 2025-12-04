@@ -81,7 +81,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [520, 0.0]
+    coordinate: [536, 8.0]
     rotation: 0
     state: disabled
 - name: freq_0
@@ -89,7 +89,7 @@ blocks:
   parameters:
     comment: ''
     gui_hint: ''
-    label: ''
+    label: Center Frequency
     label0: ''
     label1: ''
     label2: ''
@@ -142,7 +142,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [712, 0.0]
+    coordinate: [720, 8.0]
     rotation: 0
     state: enabled
 - name: rf_gain
@@ -163,9 +163,30 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 0.0]
+    coordinate: [424, 8.0]
     rotation: 0
     state: enabled
+- name: samp_rate
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Sampling rate
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: int
+    start: '1000000'
+    step: '1000000'
+    stop: '20000000'
+    value: '20000000'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [888, 8.0]
+    rotation: 0
+    state: disabled
 - name: samp_rate
   id: variable
   parameters:
@@ -175,7 +196,54 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [320, 8.0]
+    coordinate: [320, 16.0]
+    rotation: 0
+    state: disabled
+- name: samp_rate
+  id: variable_qtgui_chooser
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Sample Rate
+    label0: 5M
+    label1: 10M
+    label2: 20M
+    label3: ''
+    label4: ''
+    labels: '[]'
+    num_opts: '3'
+    option0: '5000000'
+    option1: '10000000'
+    option2: '20000000'
+    option3: '3'
+    option4: '4'
+    options: '[0, 1, 2]'
+    orient: Qt.QVBoxLayout
+    type: int
+    value: '20000000'
+    widget: radio_buttons
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1248, 4.0]
+    rotation: 0
+    state: enabled
+- name: window_pwr
+  id: variable_qtgui_check_box
+  parameters:
+    comment: ''
+    'false': '48'
+    gui_hint: ''
+    label: Window size - power (64)
+    'true': '64'
+    type: int
+    value: '64'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1048, 24.0]
     rotation: 0
     state: enabled
 - name: window_size
@@ -203,7 +271,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1352, 216.0]
+    coordinate: [1344, 288.0]
     rotation: 0
     state: enabled
 - name: blocks_complex_to_mag_squared_0
@@ -219,7 +287,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [536, 344.0]
+    coordinate: [528, 416.0]
     rotation: 0
     state: enabled
 - name: blocks_conjugate_cc_0
@@ -234,7 +302,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [736, 128.0]
+    coordinate: [728, 200.0]
     rotation: 0
     state: enabled
 - name: blocks_delay_0
@@ -254,7 +322,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [536, 120.0]
+    coordinate: [528, 192.0]
     rotation: 0
     state: enabled
 - name: blocks_delay_0_0
@@ -274,7 +342,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1304, 632.0]
+    coordinate: [1296, 704.0]
     rotation: 180
     state: enabled
 - name: blocks_divide_xx_0
@@ -292,7 +360,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1552, 216.0]
+    coordinate: [1544, 288.0]
     rotation: 0
     state: enabled
 - name: blocks_file_sink_0
@@ -310,7 +378,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1488, 912.0]
+    coordinate: [1480, 984.0]
     rotation: 0
     state: enabled
 - name: blocks_file_source_0
@@ -332,7 +400,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [136, 128.0]
+    coordinate: [128, 200.0]
     rotation: 0
     state: disabled
 - name: blocks_multiply_xx_0
@@ -350,7 +418,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [960, 200.0]
+    coordinate: [952, 272.0]
     rotation: 0
     state: enabled
 - name: blocks_stream_to_vector_0
@@ -368,7 +436,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [832, 592.0]
+    coordinate: [824, 664.0]
     rotation: 180
     state: enabled
 - name: blocks_vector_to_stream_0
@@ -386,9 +454,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [216, 592.0]
+    coordinate: [208, 664.0]
     rotation: 180
-    state: enabled
+    state: disabled
 - name: fft_vxx_0
   id: fft_vxx
   parameters:
@@ -407,7 +475,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [480, 552.0]
+    coordinate: [472, 624.0]
     rotation: 180
     state: enabled
 - name: fir_filter_xxx_0
@@ -426,7 +494,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1120, 200.0]
+    coordinate: [1112, 272.0]
     rotation: 0
     state: enabled
 - name: fir_filter_xxx_0_0
@@ -439,13 +507,13 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_delay: '0'
-    taps: '[1]*64'
+    taps: '[1]*window_pwr'
     type: fff
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1120, 336.0]
+    coordinate: [1112, 408.0]
     rotation: 0
     state: enabled
 - name: foo_wireshark_connector_0
@@ -462,7 +530,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1232, 920.0]
+    coordinate: [1224, 992.0]
     rotation: 0
     state: enabled
 - name: ieee802_11_decode_mac_0
@@ -479,7 +547,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [744, 760.0]
+    coordinate: [736, 832.0]
     rotation: 0
     state: enabled
 - name: ieee802_11_frame_equalizer_0
@@ -491,7 +559,7 @@ blocks:
     bw: 10e6
     comment: ''
     debug: 'False'
-    freq: 5.89e9
+    freq: freq_0
     log: 'False'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -499,7 +567,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [480, 752.0]
+    coordinate: [472, 824.0]
     rotation: 0
     state: enabled
 - name: ieee802_11_parse_mac_0
@@ -516,7 +584,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [992, 760.0]
+    coordinate: [984, 832.0]
     rotation: 0
     state: enabled
 - name: ieee802_11_sync_long_0
@@ -534,7 +602,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1056, 568.0]
+    coordinate: [1048, 640.0]
     rotation: 180
     state: enabled
 - name: ieee802_11_sync_short_0
@@ -548,12 +616,12 @@ blocks:
     maxoutbuf: '0'
     min_plateau: '2'
     minoutbuf: '0'
-    threshold: '0.56'
+    threshold: 0.75*(window_size/window_pwr)
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1480, 544.0]
+    coordinate: [1472, 616.0]
     rotation: 180
     state: enabled
 - name: iio_pluto_source_0
@@ -584,7 +652,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [112, 276.0]
+    coordinate: [104, 348.0]
     rotation: 0
     state: enabled
 - name: network_socket_pdu_0
@@ -604,7 +672,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1248, 744.0]
+    coordinate: [1240, 816.0]
     rotation: 0
     state: enabled
 - name: pdu_pdu_to_tagged_stream_0
@@ -621,7 +689,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [712, 976.0]
+    coordinate: [704, 1048.0]
     rotation: 0
     state: enabled
 - name: qtgui_const_sink_x_0
@@ -713,7 +781,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [800, 496.0]
+    coordinate: [792, 568.0]
     rotation: 180
     state: disabled
 - name: qtgui_const_sink_x_0_0
@@ -786,7 +854,7 @@ blocks:
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
     type: complex
-    update_time: '1'
+    update_time: '0.5'
     width1: '1'
     width10: '1'
     width2: '1'
@@ -805,7 +873,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [944, 960.0]
+    coordinate: [936, 1032.0]
     rotation: 0
     state: enabled
 - name: qtgui_const_sink_x_0_0_0
@@ -878,7 +946,7 @@ blocks:
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
     type: complex
-    update_time: '1'
+    update_time: '0.5'
     width1: '1'
     width10: '1'
     width2: '1'
@@ -897,9 +965,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [208, 840.0]
+    coordinate: [200, 912.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_const_sink_x_0_1
   id: qtgui_const_sink_x
   parameters:
@@ -989,7 +1057,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1224, 472.0]
+    coordinate: [1216, 544.0]
     rotation: 180
     state: disabled
 - name: qtgui_time_sink_x_0
@@ -1062,12 +1130,12 @@ blocks:
     style9: '1'
     tr_chan: '0'
     tr_delay: '0.00001'
-    tr_level: '0.56'
+    tr_level: 0.75*(window_size/window_pwr)
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
     type: float
-    update_time: '1'
+    update_time: '0.1'
     width1: '1'
     width10: '1'
     width2: '1'
@@ -1086,7 +1154,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1712, 208.0]
+    coordinate: [1704, 280.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_1
@@ -1183,7 +1251,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1744, 368.0]
+    coordinate: [1736, 440.0]
     rotation: 0
     state: disabled
 
