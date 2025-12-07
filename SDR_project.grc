@@ -81,7 +81,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [536, 8.0]
+    coordinate: [1456, 40.0]
     rotation: 0
     state: disabled
 - name: freq_0
@@ -142,7 +142,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [720, 8.0]
+    coordinate: [608, 8.0]
     rotation: 0
     state: enabled
 - name: rf_gain
@@ -163,7 +163,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [424, 8.0]
+    coordinate: [496, 8.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -184,7 +184,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [888, 8.0]
+    coordinate: [1128, 128.0]
     rotation: 0
     state: disabled
 - name: samp_rate
@@ -226,7 +226,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1248, 4.0]
+    coordinate: [936, 4.0]
     rotation: 0
     state: enabled
 - name: window_pwr
@@ -243,7 +243,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1048, 24.0]
+    coordinate: [768, 8.0]
     rotation: 0
     state: enabled
 - name: window_size
@@ -302,7 +302,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 200.0]
+    coordinate: [728, 216.0]
     rotation: 0
     state: enabled
 - name: blocks_delay_0
@@ -322,7 +322,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [528, 192.0]
+    coordinate: [528, 208.0]
     rotation: 0
     state: enabled
 - name: blocks_delay_0_0
@@ -378,7 +378,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1480, 984.0]
+    coordinate: [1480, 824.0]
     rotation: 0
     state: enabled
 - name: blocks_file_source_0
@@ -388,7 +388,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: C:\Users\douto\Desktop\universidade\CDIG\Wifi_Project_Baseband_recordings\Sample1_20MHz_Channel36.bin
+    file: C:\Users\douto\Desktop\universidade\CDIG\Wifi_Project_Baseband_recordings\Sample3_20MHz_Channel100.bin
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -530,7 +530,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1224, 992.0]
+    coordinate: [1216, 832.0]
     rotation: 0
     state: enabled
 - name: ieee802_11_decode_mac_0
@@ -556,7 +556,7 @@ blocks:
     affinity: ''
     algo: ieee802_11.LS
     alias: ''
-    bw: 10e6
+    bw: samp_rate
     comment: ''
     debug: 'False'
     freq: freq_0
@@ -567,7 +567,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [472, 824.0]
+    coordinate: [440, 824.0]
     rotation: 0
     state: enabled
 - name: ieee802_11_parse_mac_0
@@ -584,7 +584,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [984, 832.0]
+    coordinate: [976, 832.0]
     rotation: 0
     state: enabled
 - name: ieee802_11_sync_long_0
@@ -672,7 +672,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1240, 816.0]
+    coordinate: [1232, 992.0]
     rotation: 0
     state: enabled
 - name: pdu_pdu_to_tagged_stream_0
@@ -689,7 +689,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [704, 1048.0]
+    coordinate: [560, 1064.0]
     rotation: 0
     state: enabled
 - name: qtgui_const_sink_x_0
@@ -745,7 +745,7 @@ blocks:
     marker9: '0'
     name: '"After Sync Long"'
     nconnections: '1'
-    size: '2048'
+    size: '64'
     style1: '0'
     style10: '0'
     style2: '0'
@@ -781,7 +781,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [792, 568.0]
+    coordinate: [784, 544.0]
     rotation: 180
     state: disabled
 - name: qtgui_const_sink_x_0_0
@@ -854,7 +854,7 @@ blocks:
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
     type: complex
-    update_time: '0.5'
+    update_time: '1'
     width1: '1'
     width10: '1'
     width2: '1'
@@ -873,7 +873,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [936, 1032.0]
+    coordinate: [792, 1048.0]
     rotation: 0
     state: enabled
 - name: qtgui_const_sink_x_0_0_0
@@ -965,7 +965,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [200, 912.0]
+    coordinate: [184, 728.0]
     rotation: 0
     state: disabled
 - name: qtgui_const_sink_x_0_1
@@ -1021,7 +1021,7 @@ blocks:
     marker9: '0'
     name: '"After Sync Short"'
     nconnections: '1'
-    size: '2048'
+    size: '64'
     style1: '0'
     style10: '0'
     style2: '0'
